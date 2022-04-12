@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Github Profiles</title>
+  <link rel="stylesheet" href="./css/layout.css">
+</head>
+
+<body>
+
+  <main>
+
+    <section id="hero">
+      <div class="container">
+          <div class="hero_wrapper">
+            <h2>Github Profiles</h2>
+            <div class="search_total">
+              <input type="text" name="" id="username" placeholder="Enter Github Username">
+              <button type="button" id="submit-btn">search</button>
+            </div>
+          </div>
+         <div class="github_info--total">    
+              <div class="github_info--left">
+                    <div class="items--left">
+                      <img src="./img/image_processing20191110-30800-mr2oo2.gif" alt="github_user--image" id="image">
+                    </div>
+                    <div class="items--right">
+                      <h3 id="name">Linndsey James</h3>
+                      <span class="user--name" id="name1">@Linndsey_James</span>
+                      <div class="info--numbers">
+                        <div class="post_numbers--total">
+                          <span class="posts--numbers">1000</span>
+                          <span class="posts--title">posts</span>
+                        </div>
+                        <div class="followers_numbers--total">
+                          <span class="followers--numbers">25</span>
+                          <span class="followers--title">followers</span>
+                        </div>
+                        <div class="following_numbers--total">
+                          <span class="following--numbers">10</span>
+                          <span class="following--title">following</span>
+                        </div>
+                      </div><!-- info--numbers -->
+                    </div><!-- items--right -->
+            </div><!-- github_info--left -->
+            <div class="github_info--right">
+                  <div class="icons--left">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                  <div class="icons--right">
+                    <i class="fa-solid fa-pen"></i>
+                  </div>
+            </div> <!-- github_info--right -->
+         </div><!-- github_info--total -->
+
+         <div class="error"></div>
+         <div class="background"></div>
+      </div> <!-- container -->
+    </section>
+  </main>
+
+<script src="./js/app.js"></script>
+</body>
+</html>
