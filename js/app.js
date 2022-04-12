@@ -38,11 +38,11 @@ const searchBtn = document.querySelector('#submit-btn');
 const imageProfile = document.querySelector('#image');
 
 const card = document.querySelector(".github_info--total");
-const name = document.querySelector('#name');
+const name_user = document.querySelector('#name');
 const name1 = document.querySelector("#name1");
 const posts = document.querySelector(".posts--numbers");
-const followers = document.querySelector(".followers--numbers");
-const followings = document.querySelector(".following--numbers");
+const followersNumber = document.querySelector(".followers--numbers");
+const followingsNumber = document.querySelector(".following--numbers");
 
 const error = document.querySelector(".error");
 
@@ -79,8 +79,11 @@ function getUser(username) {
 function render(data) {
   const { avatar_url, hireable, following, followers, location, name } = data;
   imageProfile.src = avatar_url;
-  console.log(data.followers);
-  followers.textContent = `${data.followers} followers`;
+  followersNumber.textContent = data.followers;
+  followingsNumber.innerHTML = data.following;
+  name_user.innerHTML = data.name;
+  name1.innerHTML = `@${data.name}`;
+  console.log(data);
 }
 
 
