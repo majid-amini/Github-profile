@@ -60,17 +60,16 @@ searchBtn.addEventListener('click',function() {
     },2500);
     return;
   }
-  fetch (API_URL + searchTerm, {method : 'GET'})
+  fetch(API_URL + searchTerm, {method : "GET"})
   
   .then(function(response){
-      console.log(response.json);
+      return response.json();
   })
   .then (function(data){
       render(data);
       
   })
 
-  
 })
 
 function getUser(username) {
@@ -80,10 +79,9 @@ function getUser(username) {
 function render(data) {
   const { avatar_url, hireable, following, followers, location, name } = data;
   imageProfile.src = avatar_url;
-  console.log(data);
+  console.log(data.followers);
+  followers.textContent = `${data.followers} followers`;
 }
-
-
 
 
 // const arr = [
