@@ -72,9 +72,39 @@ searchBtn.addEventListener('click',function() {
 
 })
 
-function getUser(username) {
 
-}
+
+
+searchInput.addEventListener('keypress',function(event) {
+  if (event.keyCode === 13) {
+
+  
+  let searchTerm = searchInput.value;
+  if (!searchTerm) {
+    card.style.visibility = 'hidden';
+    error.className = "show--error error";
+    error.style.padding = "1rem";
+    error.innerHTML = "You Should Type A Username!";
+    setTimeout(function(){
+      error.className = error.className.replace("show--error","");
+    },2500);
+    return;
+  }
+  fetch(API_URL + searchTerm, {method : "GET"})
+  
+  .then(function(response){
+      return response.json();
+    })
+  .then (function(data){
+      render(data);
+      
+    })
+  }
+})
+
+// function getUser(username) {
+
+// }
 
 function render(data) {
   const { avatar_url, hireable, following, followers, location, name } = data;
@@ -82,7 +112,9 @@ function render(data) {
   followersNumber.textContent = data.followers;
   followingsNumber.innerHTML = data.following;
   name_user.innerHTML = data.name;
+     
   bioInfo.innerHTML = `${data.bio} and lives in ${data.location}`;
+  
   twitterAccount.innerHTML = `twitter : ${data.twitter_username}`;
   console.log(data);
 }

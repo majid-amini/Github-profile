@@ -176,7 +176,7 @@ a {
  gap: 5rem;
 }
 .hero_wrapper {
-
+  width: 50rem;
   background-color: rgba(0,212,255,0.1);
   box-shadow: 0.2rem 0.2rem 0.4rem var(--black-color);
   padding: 2rem;
@@ -191,9 +191,10 @@ a {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
-  
+  width: 100%;
 }
 .hero_wrapper .search_total input {
+  width: 100%;
   padding: 1.2rem 1rem;
   border-radius: 1rem;
   outline: none;
@@ -237,7 +238,8 @@ a {
   gap: 1.2rem;
 }
 #image {
-  width: 20rem;
+  width: 18rem;
+  padding: 1rem;
   border-radius: 50%;
 }
 .items--right {
