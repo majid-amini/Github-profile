@@ -39,8 +39,8 @@ const imageProfile = document.querySelector('#image');
 
 const card = document.querySelector(".github_info--total");
 const name_user = document.querySelector('#name');
-const name1 = document.querySelector("#name1");
-const posts = document.querySelector(".posts--numbers");
+const bioInfo = document.querySelector("#bio");
+const twitterAccount = document.querySelector(".twitter--account");
 const followersNumber = document.querySelector(".followers--numbers");
 const followingsNumber = document.querySelector(".following--numbers");
 
@@ -82,7 +82,8 @@ function render(data) {
   followersNumber.textContent = data.followers;
   followingsNumber.innerHTML = data.following;
   name_user.innerHTML = data.name;
-  name1.innerHTML = `@${data.name}`;
+  bioInfo.innerHTML = `${data.bio} and lives in ${data.location}`;
+  twitterAccount.innerHTML = `twitter : ${data.twitter_username}`;
   console.log(data);
 }
 

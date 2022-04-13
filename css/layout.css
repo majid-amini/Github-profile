@@ -226,8 +226,8 @@ a {
   height: 20rem;
   padding: 3rem;
   border-radius: 1.5rem;
-  visibility: visible;
-  /* opacity: 0; */
+  visibility: show;
+  opacity: 1;
   transition: all 0.3s ease-in-out;
 }
 .github_info--left {
