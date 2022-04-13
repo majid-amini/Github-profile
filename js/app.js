@@ -37,7 +37,7 @@ const searchInput = document.querySelector('#username');
 const searchBtn = document.querySelector('#submit-btn');
 const imageProfile = document.querySelector('#image');
 
-const card = document.querySelector(".github_info--total");
+const card = document.querySelector("#card-container");
 const name_user = document.querySelector('#name');
 const bioInfo = document.querySelector("#bio");
 const twitterAccount = document.querySelector(".twitter--account");
@@ -60,6 +60,10 @@ searchBtn.addEventListener('click',function() {
     },2500);
     return;
   }
+  
+  card.style.visibility = "visible";
+  card.style.opacity = "1";
+  
   fetch(API_URL + searchTerm, {method : "GET"})
   
   .then(function(response){
@@ -77,7 +81,7 @@ searchBtn.addEventListener('click',function() {
 
 searchInput.addEventListener('keypress',function(event) {
   if (event.keyCode === 13) {
-
+    
   
   let searchTerm = searchInput.value;
   if (!searchTerm) {
@@ -90,6 +94,9 @@ searchInput.addEventListener('keypress',function(event) {
     },2500);
     return;
   }
+  
+  card.style.visibility = "visible";
+  card.style.opacity = "1";
   fetch(API_URL + searchTerm, {method : "GET"})
   
   .then(function(response){
